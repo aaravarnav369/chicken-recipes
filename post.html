@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="post-title">Loading...</title>
+    <meta name="description" id="post-description" content="">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div>
+                <h1>Beautiful Blog</h1>
+                <div class="tagline">Where stories come to life</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="ad-placeholder top">
+            <!-- AdSense Top Placeholder -->
+            <strong>Advertisement</strong>
+        </div>
+        
+        <article class="post-page">
+            <header class="post-header">
+                <h1 id="post-title-display">Loading post...</h1>
+                <div class="post-meta">
+                    <span>By <span id="post-author"></span></span>
+                    <span><span id="post-date"></span></span>
+                    <span><span id="post-category"></span></span>
+                </div>
+            </header>
+            
+            <img id="post-image" src="" alt="" onerror="this.style.display='none'">
+            
+            <div class="post-content-full" id="post-content">
+                <!-- Content will be loaded here -->
+            </div>
+            
+            <div id="post-tags">
+                <!-- Tags will be loaded here -->
+            </div>
+            
+            <div class="ad-placeholder mid">
+                <!-- AdSense Mid Placeholder -->
+                <strong>Advertisement</strong>
+            </div>
+            
+            <div class="related-posts" id="related-posts">
+                <h3>Related Posts</h3>
+                <div id="related-posts-container"></div>
+            </div>
+            
+            <div class="ad-placeholder bottom">
+                <!-- AdSense Bottom Placeholder -->
+                <strong>Advertisement</strong>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Beautiful Blog. All rights reserved.</p>
+            <p>Designed for automated content generation</p>
+        </div>
+    </footer>
+
+    <script src="js/render.js"></script>
+</body>
+</html>
