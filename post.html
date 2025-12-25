@@ -8,67 +8,70 @@
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title">My Automated Blog</h1>
-            <p class="site-tagline">Where content meets automation</p>
-            <nav class="nav">
+    <header>
+        <div class="navbar">
+            <div>
+                <h1>Beautiful Blog</h1>
+                <div class="tagline">Where stories come to life</div>
+            </div>
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="container">
-            <article class="post">
-                <div id="adsense-top" class="adsense-placeholder">
-                    <!-- AdSense Top Placeholder -->
-                </div>
-                
-                <header class="post-header">
-                    <h1 id="post-title-display">Loading post...</h1>
-                    <div class="post-meta">
-                        <span class="post-author">By <span id="post-author"></span></span>
-                        <span class="post-date"><span id="post-date"></span></span>
-                        <span class="post-category"><span id="post-category"></span></span>
-                    </div>
-                </header>
-                
-                <div class="post-image">
-                    <img id="post-image" src="" alt="" onerror="this.style.display='none'">
-                </div>
-                
-                <div class="post-content" id="post-content">
-                    <!-- Content will be loaded here -->
-                </div>
-                
-                <div class="post-tags" id="post-tags">
-                    <!-- Tags will be loaded here -->
-                </div>
-                
-                <div id="adsense-mid" class="adsense-placeholder">
-                    <!-- AdSense Mid Placeholder -->
-                </div>
-                
-                <div class="related-posts" id="related-posts">
-                    <h3>Related Posts</h3>
-                    <div id="related-posts-container"></div>
-                </div>
-                
-                <div id="adsense-bottom" class="adsense-placeholder">
-                    <!-- AdSense Bottom Placeholder -->
-                </div>
-            </article>
+    <div class="container">
+        <div class="ad-placeholder top">
+            <!-- AdSense Top Placeholder -->
+            <strong>Advertisement</strong>
         </div>
-    </main>
+        
+        <article class="post-page">
+            <header class="post-header">
+                <h1 id="post-title-display">Loading post...</h1>
+                <div class="post-meta">
+                    <span>By <span id="post-author"></span></span>
+                    <span><span id="post-date"></span></span>
+                    <span><span id="post-category"></span></span>
+                </div>
+            </header>
+            
+            <img id="post-image" src="" alt="" onerror="this.style.display='none'">
+            
+            <div class="post-content-full" id="post-content">
+                <!-- Content will be loaded here -->
+            </div>
+            
+            <div id="post-tags">
+                <!-- Tags will be loaded here -->
+            </div>
+            
+            <div class="ad-placeholder mid">
+                <!-- AdSense Mid Placeholder -->
+                <strong>Advertisement</strong>
+            </div>
+            
+            <div class="related-posts" id="related-posts">
+                <h3>Related Posts</h3>
+                <div id="related-posts-container"></div>
+            </div>
+            
+            <div class="ad-placeholder bottom">
+                <!-- AdSense Bottom Placeholder -->
+                <strong>Advertisement</strong>
+            </div>
+        </article>
+    </div>
 
-    <footer class="site-footer">
+    <footer>
         <div class="container">
-            <p>&copy; 2025 My Automated Blog. All rights reserved.</p>
+            <p>&copy; 2025 Beautiful Blog. All rights reserved.</p>
+            <p>Designed for automated content generation</p>
         </div>
     </footer>
 

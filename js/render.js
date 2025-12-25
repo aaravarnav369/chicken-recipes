@@ -39,15 +39,16 @@ function renderPostsGrid() {
             <a href="post.html?slug=${post.slug}">
                 <img src="${post.image}" alt="${post.title}" class="post-card-image" onerror="this.style.display='none'">
             </a>
-            <div class="post-card-content">
+            <div class="post-content">
                 <h2 class="post-card-title">
                     <a href="post.html?slug=${post.slug}">${post.title}</a>
                 </h2>
                 <p class="post-card-excerpt">${post.description}</p>
-                <div class="post-card-meta">
+                <div class="post-meta">
                     <span class="post-date">${formatDate(post.date)}</span>
                     <span class="post-category">${post.category}</span>
                 </div>
+                <a href="post.html?slug=${post.slug}" class="read-more">Read More</a>
             </div>
         `;
         
@@ -86,11 +87,15 @@ function renderSinglePost() {
     const tagsContainer = document.getElementById('post-tags');
     if (tagsContainer && post.tags && post.tags.length > 0) {
         tagsContainer.innerHTML = '<h4>Tags:</h4>';
+        const tagsList = document.createElement('div');
+        tagsList.className = 'tags-list';
         post.tags.forEach(tag => {
             const tagSpan = document.createElement('span');
+            tagSpan.className = 'tag';
             tagSpan.textContent = tag;
-            tagsContainer.appendChild(tagSpan);
+            tagsList.appendChild(tagSpan);
         });
+        tagsContainer.appendChild(tagsList);
     } else if (tagsContainer) {
         tagsContainer.style.display = 'none';
     }
@@ -104,10 +109,19 @@ function renderRelatedPosts(currentPost) {
     const relatedContainer = document.getElementById('related-posts-container');
     if (!relatedContainer) return;
     
-    // Find posts in the same category, excluding the current post
-    const relatedPosts = posts
-        .filter(post => post.category === currentPost.category && post.slug !== currentPost.slug)
-        .slice(0, 3); // Limit to 3 related posts
+    // Use the related array from the post data if available
+    let relatedPosts = [];
+    if (currentPost.related && Array.isArray(currentPost.related)) {
+        relatedPosts = currentPost.related
+            .map(id => posts.find(post => post.id === id))
+            .filter(post => post !== undefined && post.slug !== currentPost.slug)
+            .slice(0, 3); // Limit to 3 related posts
+    } else {
+        // Fallback to category-based related posts
+        relatedPosts = posts
+            .filter(post => post.category === currentPost.category && post.slug !== currentPost.slug)
+            .slice(0, 3); // Limit to 3 related posts
+    }
     
     if (relatedPosts.length === 0) {
         document.getElementById('related-posts').style.display = 'none';
