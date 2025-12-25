@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="post-title">Loading...</title>
+    <meta name="description" id="post-description" content="">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">My Automated Blog</h1>
+            <p class="site-tagline">Where content meets automation</p>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <article class="post">
+                <div id="adsense-top" class="adsense-placeholder">
+                    <!-- AdSense Top Placeholder -->
+                </div>
+                
+                <header class="post-header">
+                    <h1 id="post-title-display">Loading post...</h1>
+                    <div class="post-meta">
+                        <span class="post-author">By <span id="post-author"></span></span>
+                        <span class="post-date"><span id="post-date"></span></span>
+                        <span class="post-category"><span id="post-category"></span></span>
+                    </div>
+                </header>
+                
+                <div class="post-image">
+                    <img id="post-image" src="" alt="" onerror="this.style.display='none'">
+                </div>
+                
+                <div class="post-content" id="post-content">
+                    <!-- Content will be loaded here -->
+                </div>
+                
+                <div class="post-tags" id="post-tags">
+                    <!-- Tags will be loaded here -->
+                </div>
+                
+                <div id="adsense-mid" class="adsense-placeholder">
+                    <!-- AdSense Mid Placeholder -->
+                </div>
+                
+                <div class="related-posts" id="related-posts">
+                    <h3>Related Posts</h3>
+                    <div id="related-posts-container"></div>
+                </div>
+                
+                <div id="adsense-bottom" class="adsense-placeholder">
+                    <!-- AdSense Bottom Placeholder -->
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 My Automated Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/render.js"></script>
+</body>
+</html>
